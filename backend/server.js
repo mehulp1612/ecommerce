@@ -24,7 +24,7 @@ app.use(express.urlencoded({
 
 
 
-mongoose.connect(`mongodb+srv://mehulp1612:manku1612@cluster0.8lan6.mongodb.net/ecomm?retryWrites=true&w=majority`,{
+mongoose.connect(process.env.MONGO_URI,{
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
